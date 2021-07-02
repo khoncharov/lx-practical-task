@@ -325,9 +325,9 @@ class Controller {
 		return [taskNum, optionNum]
 	}
 
-	static optionCheckboxChanged(sender) {
-		const [taskNum, optionNum] = this.getTaskOptionNum(sender.id)
-		const optionState = sender.checked
+	static optionCheckboxChanged(target) {
+		const [taskNum, optionNum] = this.getTaskOptionNum(target.id)
+		const optionState = target.checked
 		test.changeUserKey(taskNum, optionNum, optionState)
 	}
 	
